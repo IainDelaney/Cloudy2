@@ -28,12 +28,8 @@ struct Weather: Codable {
 
 struct Temp: Codable {
 	let day: Float
-	let min: Float
-	let max: Float
-	let night: Float
-	let eve: Float
-	let morn: Float
 }
+
 struct City: Codable {
 	let id:Int
 	let name: String

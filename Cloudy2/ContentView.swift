@@ -9,13 +9,51 @@
 import SwiftUI
 
 struct ContentView: View {
+	@ObservedObject var viewModel:ViewModel
     var body: some View {
-        Text("Hello, World!")
-    }
+		VStack {
+			HStack {
+				Text("Weather for \(viewModel.city)")
+					.font(.title)
+			}
+			.frame(height: 30.0)
+			VStack{
+				HStack{
+					DayView(weather: viewModel.days[0],image: viewModel.iconImages[0])
+				}
+				HStack{
+					DayView(weather: viewModel.days[1],image: viewModel.iconImages[1])
+					DayView(weather: viewModel.days[2],image: viewModel.iconImages[2])
+				}
+				HStack{
+					DayView(weather: viewModel.days[3],image: viewModel.iconImages[3])
+					DayView(weather: viewModel.days[4],image: viewModel.iconImages[4])
+				}
+			}
+		}.onAppear {
+			self.viewModel.getLocation()
+		}
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+		ContentView(viewModel: ViewModel())
     }
+}
+
+struct DayView: View {
+	var weather: DailyWeather
+	var image: UIImage
+	var body: some View {
+		GeometryReader{ geometry in
+			VStack {
+				Text(self.weather.description)
+				Image(uiImage: self.image)
+				Text(self.weather.temperature)
+				Text(self.weather.dateString)
+			}
+			.frame(width: geometry.size.width/2, height: 185.0)
+		}
+	}
 }
