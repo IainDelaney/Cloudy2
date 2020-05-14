@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B95B92B3246DB47E004030ED /* CloudPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B92B2246DB47E004030ED /* CloudPath.swift */; };
 		B9CA8F5F246C3B62008B6F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA8F5E246C3B62008B6F0D /* AppDelegate.swift */; };
 		B9CA8F61246C3B62008B6F0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA8F60246C3B62008B6F0D /* SceneDelegate.swift */; };
 		B9CA8F63246C3B62008B6F0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA8F62246C3B62008B6F0D /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B95B92B2246DB47E004030ED /* CloudPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPath.swift; sourceTree = "<group>"; };
 		B9CA8F5B246C3B62008B6F0D /* Cloudy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CA8F5E246C3B62008B6F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9CA8F60246C3B62008B6F0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				B9CA8F74246C584F008B6F0D /* DataModel.swift */,
 				B9CA8F72246C5811008B6F0D /* ViewModel.swift */,
 				B9CA8F62246C3B62008B6F0D /* ContentView.swift */,
+				B95B92B2246DB47E004030ED /* CloudPath.swift */,
 				B9CA8F64246C3B63008B6F0D /* Assets.xcassets */,
 				B9CA8F69246C3B63008B6F0D /* LaunchScreen.storyboard */,
 				B9CA8F6C246C3B63008B6F0D /* Info.plist */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95B92B3246DB47E004030ED /* CloudPath.swift in Sources */,
 				B9CA8F75246C584F008B6F0D /* DataModel.swift in Sources */,
 				B9CA8F5F246C3B62008B6F0D /* AppDelegate.swift in Sources */,
 				B9CA8F61246C3B62008B6F0D /* SceneDelegate.swift in Sources */,
