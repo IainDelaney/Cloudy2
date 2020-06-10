@@ -119,11 +119,6 @@ extension ViewModel: CLLocationManagerDelegate {
 
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
 		print(error)
-//		let alertController = UIAlertController(title: "Location Error", message: "Error finding your location. Please make sure location services are enabled.", preferredStyle: .alert)
-//		let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-//
-//		alertController.addAction(defaultAction)
-//		present(alertController, animated: true, completion: nil)
 	}
 	func loadWeather(latitude:String, longitude: String) {
 		let APIKey = Bundle.main.object(forInfoDictionaryKey: "APIKey") as! String
