@@ -67,9 +67,12 @@ struct CloudView: View {
 					.stroke(Color.black, lineWidth:3)
 				VStack {
 					Text(self.weather.temperature)
-						.font(.title)
+						.font(.body)
 					Image(uiImage: self.image)
 					Text(self.weather.description)
+					.frame(width: 150)
+					.font(.footnote)
+					.lineLimit(2)
 				}
 			}
 		}
