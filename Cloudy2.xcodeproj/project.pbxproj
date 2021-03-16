@@ -19,17 +19,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B95B92B2246DB47E004030ED /* CloudPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPath.swift; sourceTree = "<group>"; };
+		B95B92B2246DB47E004030ED /* CloudPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPath.swift; sourceTree = "<group>"; usesTabs = 0; };
 		B9CA8F5B246C3B62008B6F0D /* Cloudy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9CA8F5E246C3B62008B6F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9CA8F5E246C3B62008B6F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		B9CA8F60246C3B62008B6F0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B9CA8F62246C3B62008B6F0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9CA8F64246C3B63008B6F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9CA8F67246C3B63008B6F0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9CA8F6A246C3B63008B6F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9CA8F6C246C3B63008B6F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9CA8F72246C5811008B6F0D /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		B9CA8F74246C584F008B6F0D /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		B9CA8F72246C5811008B6F0D /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; usesTabs = 0; };
+		B9CA8F74246C584F008B6F0D /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

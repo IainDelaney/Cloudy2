@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
 	@ObservedObject var viewModel:ViewModel
-    var body: some View {
+	var body: some View {
 		VStack {
 			HStack {
 				Text("Weather for \(viewModel.city)")
@@ -37,9 +37,9 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		ContentView(viewModel: ViewModel())
-    }
+	}
 }
 
 struct DayView: View {
@@ -47,12 +47,12 @@ struct DayView: View {
 	var image: UIImage
 	var body: some View {
 		GeometryReader{ geometry in
-				VStack {
-					CloudView(weather: self.weather, image: self.image)
-					Text(self.weather.dateString)
-						.font(.headline)
-				}
-				.frame(width: geometry.size.width/2, height: 185.0)
+			VStack {
+				CloudView(weather: self.weather, image: self.image)
+				Text(self.weather.dateString)
+					.font(.headline)
+			}
+			.frame(width: geometry.size.width/2, height: 185.0)
 		}
 	}
 }
@@ -79,19 +79,19 @@ struct CloudView: View {
 	}
 }
 struct ScaledBezier: Shape {
-    let bezierPath: UIBezierPath
+	let bezierPath: UIBezierPath
 
-    func path(in rect: CGRect) -> Path {
-        let path = Path(bezierPath.cgPath)
+	func path(in rect: CGRect) -> Path {
+		let path = Path(bezierPath.cgPath)
 
-        // Figure out how much bigger we need to make our path in order for it to fill the available space without clipping.
+		// Figure out how much bigger we need to make our path in order for it to fill the available space without clipping.
 		let scaleX = rect.width / bezierPath.bounds.width
 		let scaleY = rect.height / bezierPath.bounds.height
 
-        // Create an affine transform that uses the multiplier for both dimensions equally.
-        let transform = CGAffineTransform(scaleX: scaleX, y: scaleY)
+		// Create an affine transform that uses the multiplier for both dimensions equally.
+		let transform = CGAffineTransform(scaleX: scaleX, y: scaleY)
 
-        // Apply that scale and send back the result.
-        return path.applying(transform)
-    }
+		// Apply that scale and send back the result.
+		return path.applying(transform)
+	}
 }
