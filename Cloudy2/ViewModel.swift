@@ -16,6 +16,13 @@ struct DailyWeather {
 	var description: String = ""
     var dateString: String = ""
 	var iconName: String = ""
+
+    init(temperature: String, description: String, dateString: String, iconName: String) {
+        self.temperature = temperature
+        self.description = description
+        self.dateString = dateString
+        self.iconName = iconName
+    }
 }
 
 extension DailyWeather {
@@ -46,6 +53,7 @@ class ViewModel: NSObject, ObservableObject {
     @Published var iconImages:[UIImage]
     var haveLocation = false
     var locationManager = CLLocationManager()
+
     init(city:String, days:[DailyWeather], icons:[UIImage] ) {
         self.city = city
         self.days = days
@@ -53,7 +61,7 @@ class ViewModel: NSObject, ObservableObject {
     }
 
     convenience override init() {
-        self.init(city: "", days: Array(repeating: DailyWeather(), count: 5), icons: Array(repeating: UIImage(), count: 5))
+        self.init(city: "", days: Array(repeating: DailyWeather(temperature: "10", description: "Warm", dateString: "Today", iconName: "01d"), count: 5), icons: Array(repeating: UIImage(), count: 5))
     }
 
     func updateFromModel(_ dataModel: DataModel) {
