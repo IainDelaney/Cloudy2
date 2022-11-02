@@ -20,12 +20,11 @@ struct DayView: View {
             }
             .frame(width: geometry.size.width/2, height: 185.0)
         }
-        .background(Color.blue)
     }
 }
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(weather:DailyWeather() , image: UIImage(named:"preview_icon")!)
+        DayView(weather:DailyWeather(temperature: "11", description: "Warm", dateString: "Today", iconName: "10d") , image: UIImage(named:"preview_icon")!)
     }
 }
