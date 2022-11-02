@@ -15,7 +15,7 @@ struct CloudView: View {
         ZStack {
             ScaledBezier(bezierPath: .cloud)
                 .stroke(Color.black, lineWidth:3)
-            VStack(spacing:1) {
+            VStack(spacing: -10) {
                 Text(self.weather.temperature)
                     .font(.body)
                 Image(uiImage: self.image)
