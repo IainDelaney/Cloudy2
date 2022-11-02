@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B95B92B3246DB47E004030ED /* CloudPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B92B2246DB47E004030ED /* CloudPath.swift */; };
+		B9C078B82912AFAE00FC1743 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C078B72912AFAE00FC1743 /* DayView.swift */; };
+		B9C078BA2912B0F400FC1743 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B9C078B92912B0F400FC1743 /* README.md */; };
+		B9C078BC2912B53F00FC1743 /* CloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C078BB2912B53F00FC1743 /* CloudView.swift */; };
+		B9C078BE2912C3BA00FC1743 /* ScaledBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C078BD2912C3BA00FC1743 /* ScaledBezier.swift */; };
 		B9CA8F5F246C3B62008B6F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA8F5E246C3B62008B6F0D /* AppDelegate.swift */; };
 		B9CA8F61246C3B62008B6F0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA8F60246C3B62008B6F0D /* SceneDelegate.swift */; };
 		B9CA8F63246C3B62008B6F0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA8F62246C3B62008B6F0D /* ContentView.swift */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		B95B92B2246DB47E004030ED /* CloudPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPath.swift; sourceTree = "<group>"; usesTabs = 0; };
+		B9C078B72912AFAE00FC1743 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		B9C078B92912B0F400FC1743 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B9C078BB2912B53F00FC1743 /* CloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudView.swift; sourceTree = "<group>"; };
+		B9C078BD2912C3BA00FC1743 /* ScaledBezier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledBezier.swift; sourceTree = "<group>"; };
 		B9CA8F5B246C3B62008B6F0D /* Cloudy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CA8F5E246C3B62008B6F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		B9CA8F60246C3B62008B6F0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,10 +54,12 @@
 		B9CA8F52246C3B62008B6F0D = {
 			isa = PBXGroup;
 			children = (
+				B9C078B92912B0F400FC1743 /* README.md */,
 				B9CA8F5D246C3B62008B6F0D /* Cloudy2 */,
 				B9CA8F5C246C3B62008B6F0D /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		B9CA8F5C246C3B62008B6F0D /* Products */ = {
 			isa = PBXGroup;
@@ -67,6 +77,9 @@
 				B9CA8F74246C584F008B6F0D /* DataModel.swift */,
 				B9CA8F72246C5811008B6F0D /* ViewModel.swift */,
 				B9CA8F62246C3B62008B6F0D /* ContentView.swift */,
+				B9C078B72912AFAE00FC1743 /* DayView.swift */,
+				B9C078BB2912B53F00FC1743 /* CloudView.swift */,
+				B9C078BD2912C3BA00FC1743 /* ScaledBezier.swift */,
 				B95B92B2246DB47E004030ED /* CloudPath.swift */,
 				B9CA8F64246C3B63008B6F0D /* Assets.xcassets */,
 				B9CA8F69246C3B63008B6F0D /* LaunchScreen.storyboard */,
@@ -111,7 +124,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = IainDelaney;
 				TargetAttributes = {
 					B9CA8F5A246C3B62008B6F0D = {
@@ -144,6 +157,7 @@
 			files = (
 				B9CA8F6B246C3B63008B6F0D /* LaunchScreen.storyboard in Resources */,
 				B9CA8F68246C3B63008B6F0D /* Preview Assets.xcassets in Resources */,
+				B9C078BA2912B0F400FC1743 /* README.md in Resources */,
 				B9CA8F65246C3B63008B6F0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,9 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C078BE2912C3BA00FC1743 /* ScaledBezier.swift in Sources */,
+				B9C078B82912AFAE00FC1743 /* DayView.swift in Sources */,
 				B95B92B3246DB47E004030ED /* CloudPath.swift in Sources */,
 				B9CA8F75246C584F008B6F0D /* DataModel.swift in Sources */,
 				B9CA8F5F246C3B62008B6F0D /* AppDelegate.swift in Sources */,
+				B9C078BC2912B53F00FC1743 /* CloudView.swift in Sources */,
 				B9CA8F61246C3B62008B6F0D /* SceneDelegate.swift in Sources */,
 				B9CA8F73246C5811008B6F0D /* ViewModel.swift in Sources */,
 				B9CA8F63246C3B62008B6F0D /* ContentView.swift in Sources */,
@@ -204,6 +221,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -228,7 +246,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -264,6 +282,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -282,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
