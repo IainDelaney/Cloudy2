@@ -38,6 +38,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView(viewModel: ViewModel())
+        ContentView(viewModel: ViewModel(city: "City", days: Array(repeating: DailyWeather(temperature: "10", description: "Warm", dateString: "Today", iconName: "01d"), count: 5) , icons: Array(repeating: UIImage(named:"preview_icon")!, count: 5) ))
 	}
 }
