@@ -15,14 +15,14 @@ struct CloudView: View {
         ZStack {
             ScaledBezier(bezierPath: .cloud)
                 .stroke(Color.black, lineWidth:3)
-            VStack {
+            VStack(spacing:1) {
                 Text(self.weather.temperature)
                     .font(.body)
                 Image(uiImage: self.image)
                 Text(self.weather.description)
-                .frame(width: 150)
-                .font(.footnote)
-                .lineLimit(2)
+                    .frame(width: 150)
+                    .font(.footnote)
+                    .lineLimit(2)
             }
         }
     }
@@ -30,6 +30,6 @@ struct CloudView: View {
 
 struct CloudView_Previews: PreviewProvider {
     static var previews: some View {
-        CloudView(weather: DailyWeather(), image: UIImage(named:"preview_icon")!)
+        CloudView(weather: DailyWeather(WeatherModel(weather: [Weather(id: 1, main: "main", description: "Description", icon: "10d")], temp: Temp(day: 20.0)), index: 0), image: UIImage(named:"preview_icon")!)
     }
 }
