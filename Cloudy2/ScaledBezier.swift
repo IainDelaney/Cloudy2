@@ -20,7 +20,7 @@ struct ScaledBezier: Shape {
         let scaleY = rect.height / bezierPath.bounds.height
 
         // Create an affine transform that uses the multiplier for both dimensions equally.
-        let transform = CGAffineTransform(scaleX: scaleX, y: scaleY)
+        let transform = CGAffineTransform(scaleX: scaleX * 0.9, y: scaleY * 0.9)
 
         // Apply that scale and send back the result.
         return path.applying(transform)
