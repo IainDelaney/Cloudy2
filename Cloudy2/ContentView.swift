@@ -19,7 +19,11 @@ struct ContentView: View {
 			.frame(height: 30.0)
 			VStack{
 				HStack{
+                    GeometryReader { geometry in
                     DayView(weather: viewModel.days[0],image: viewModel.iconImages[0])
+                            .frame(width: geometry.size.width * 0.5)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
 					}
 				HStack{
 					DayView(weather: viewModel.days[1],image: viewModel.iconImages[1])
