@@ -35,11 +35,10 @@ extension DailyWeather {
         dateComponent.day = index
         let calendar = Calendar.current
         let date = calendar.date(byAdding: dateComponent, to: Date(), wrappingComponents:true )!
-        switch index {
-            case 0,1:
-                dateFormatter.dateStyle = .short
-                dateFormatter.doesRelativeDateFormatting = true
-            default:
+        dateFormatter.dateStyle = .short
+        if index == 0 || index == 1 {
+            dateFormatter.doesRelativeDateFormatting = true
+        } else {
                 dateFormatter.dateFormat = "EEEE"
         }
 
