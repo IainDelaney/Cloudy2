@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import CoreLocation
-import Combine
 
 struct DailyWeather {
 	var temperature: String = ""
@@ -79,22 +78,16 @@ class ViewModel: NSObject, ObservableObject {
         guard let imageURL = URL(string: iconPath) else {
             return
         }
-        URLSession.shared.dataTask(with: imageURL) { data,response, error in
-            if let error = error {
-                print(error)
-                return
-            }
-            guard let data = data else {
-                print("no data")
+        Task {
+            let (data, response) = try await URLSession.shared.data(from: imageURL)
+            guard let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
                 return
             }
             if let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.iconImages[index] = image
-                }
+                iconImages[index] = image
             }
-        }.resume()
-
+        }
     }
 }
 
@@ -133,24 +126,19 @@ extension ViewModel: CLLocationManagerDelegate {
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast/daily?lat=\(latitude)&lon=\(longitude)&mode=json&units=metric&cnt=5&APPID=\(APIKey)") else {
             return
         }
-        URLSession.shared.dataTask(with: url){ data, response, error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let httpResponse = response as? HTTPURLResponse {
-                if httpResponse.statusCode == 200 {
-                    if let data = data {
-                        let decoder = JSONDecoder()
-                        do {
-                            let modelData = try decoder.decode(DataModel.self, from: data)
-                            DispatchQueue.main.async {
-                                self.updateFromModel(modelData)
-                            }
-                        } catch let error {
-                            print(error)
-                        }
-                    }
+        Task {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            guard let httpResponse = response as? HTTPURLResponse,
+                  httpResponse.statusCode == 200 else {
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let modelData = try decoder.decode(DataModel.self, from: data)
+                DispatchQueue.main.async {
+                    self.updateFromModel(modelData)
                 }
             }
-        }.resume()
+        }
     }
 }
